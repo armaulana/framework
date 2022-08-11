@@ -1,7 +1,7 @@
-### File config.php
+#### File config.php
 $config['base_url'] = 'test';
 
-### File database.php
+#### File database.php
 
 'hostname' => 'localhost',
 'username' => 'root',
@@ -12,7 +12,7 @@ $config['base_url'] = 'test';
 ### File autoload.php
 $autoload['libraries'] = array('database');
 
-### File config 
+#### File config 
 $config['log_threshold'] = 1;
 
 ## Referensi , Resource
