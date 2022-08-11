@@ -50,7 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						header			
+						<h5 class="title" style="margin-bottom: 0px"></h5>
+						<small class="title-small"></small>
 					</div>
 					<div class="modal-body">
 						<form action="" method="" class="form-horizontal" encrtyp="multipart/data-type">
@@ -69,7 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</form>
 					</div>
 					<div class="modal-footer">
-						<a href="javascript:void(0)" class="" data-dismiss="modal">Cancle</a>
+						<a href="javascript:void(0)" class="btn btn-sm btn-primary" onclick="save()">Simpan</a>
+						<a href="javascript:void(0)" class="btn btn-sm btn-danger" data-dismiss="modal">Cancle</a>
 					</div>
 				</div>
 			</div>
@@ -125,7 +127,10 @@ function reloadTable(){
 }
 
 function add_posting(){
+	save_method = "add";
 	$('#modal').modal('show');
+	$('.title').html('<h3 style="margin-bottom: 2px"><b>Tambah</b></h3>');
+	$('.title-small').html('&nbsp;informations');
 }
 
 </script>
