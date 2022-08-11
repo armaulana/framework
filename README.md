@@ -15,4 +15,7 @@ $autoload['libraries'] = array('database');
 ### File config 
 $config['log_threshold'] = 1;
 
-
+## Referensi , Resource
+- https://codeigniter.com/
+- https://datatables.net/
+- https://getbootstrap.com/
