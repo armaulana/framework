@@ -133,3 +133,6 @@ ERROR - 2022-08-11 14:18:58 --> Severity: Notice --> Undefined offset: 3 C:\xamp
 ERROR - 2022-08-11 14:18:58 --> Severity: Notice --> Undefined offset: 3 C:\xampp\htdocs\ci3\application\models\MyModel.php 34
 ERROR - 2022-08-11 14:18:58 --> Severity: Notice --> Undefined offset: 3 C:\xampp\htdocs\ci3\application\models\MyModel.php 34
 ERROR - 2022-08-11 14:18:58 --> Severity: Notice --> Undefined offset: 3 C:\xampp\htdocs\ci3\application\models\MyModel.php 34
+ERROR - 2022-08-11 17:19:51 --> Severity: Notice --> Undefined property: Welcome::$tale C:\xampp\htdocs\framework\system\core\Model.php 74
+ERROR - 2022-08-11 17:19:51 --> Query error: Unknown column 'is_trash' in 'where clause' - Invalid query: SELECT COUNT(*) AS `numrows`
+WHERE `is_trash` = 1

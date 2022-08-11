@@ -45,13 +45,13 @@ class Welcome extends CI_Controller {
 					<a href="javascript:void(0)" class="btn btn-sm btn-danger">Delete</a>';
 			$data[] = $row;
 		}
-			$output = array(
-				"draw" => $_POST['draw'],
-				"recordsTotal" => $this->MyModel->count_all(),
-				"recordsFiltered" => $this->MyModel->count_filtered(),
-				"data" => $data,
-			);
-			echo json_encode($output);
+		$output = array(
+			"draw" => $_POST['draw'],
+			"recordsTotal" => $this->MyModel->count_all(),
+			"recordsFiltered" => $this->MyModel->count_filtered(),
+			"data" => $data,
+		);
+		echo json_encode($output);
 	}
 
 	public function ajax_add(){
@@ -59,6 +59,7 @@ class Welcome extends CI_Controller {
 		$nama = $this->input->post('nama');
 		$alamat = $this->input->post('alamat');
 		if(empty($data['error'])){
+			date_default_timezone_set('Asia/Jakarta');
 			$data = array(
 				'nik' => $nik,
 				'nama' => $nama,
@@ -85,6 +86,7 @@ class Welcome extends CI_Controller {
 		$nama = $this->input->post('nama');
 		$alamat = $this->input->post('alamat');
 		if(empty($data['error'])){
+			date_default_timezone_set('Asia/Jakarta');
 			$data = array(
 				'nik' => $nik,
 				'nama' => $nama,
