@@ -9,7 +9,7 @@ $config['base_url'] = 'test';
 'database' => 'test',
 'dbdriver' => 'mysqli',
 
-### File autoload.php
+#### File autoload.php
 $autoload['libraries'] = array('database');
 
 #### File config 
