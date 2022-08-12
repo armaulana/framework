@@ -47,8 +47,8 @@ class Welcome extends CI_Controller {
 		}
 		$output = array(
 			"draw" => $_POST['draw'],
-			"recordsTotal" => $this->MyModel->count_all(),
-			"recordsFiltered" => $this->MyModel->count_filtered(),
+			"recordsTotal" => $this->MyModel->count_all(), //-- 
+			"recordsFiltered" => $this->MyModel->count_filtered(), //-- 
 			"data" => $data,
 		);
 		echo json_encode($output);

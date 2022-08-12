@@ -23,16 +23,16 @@ class MyModel extends CI_Model{
                 }else{
                     $this->db->or_like($item, $_POST['search']['value']);
                 }
-                if(count($this->column_search) - 1 == $i) //---
+                if(count($this->column_search) - 1 == $i) //--- - 1 == $i
                     $this->db->group_end();  //-- 
             }
-            $i++;
+            $i++; //-- i++
         }
         if(isset($_POST['order'])){ //-- 
             $this->db->order_by($this->column_order[$_POST['order']['0']['column']], $_POST['order']['0']['dir']); //-- 
-        }else if(isset($this->order)){
+        }else if(isset($this->order)){ //--
             $order = $this->order;
-            $this->db->order_by(key($order), $order[key($order)]);
+            $this->db->order_by(key($order), $order[key($order)]); //---
         }
     }
 
@@ -46,14 +46,14 @@ class MyModel extends CI_Model{
 
     function count_filtered(){
         $this->_get_datatables_query();
-        $query = $this->db->get();
+        $query = $this->db->get(); //-- 
         return $query->num_rows();
     }
 
     function count_all(){
         $this->db->where('is_trash', 1);
-        $this->db->from($this->table);
-        return $this->db->count_all_results();
+        $query= $this->db->from($this->table);
+        return $query->count_all_results(); //-- 
     }
 
     public function save($data){
@@ -63,7 +63,7 @@ class MyModel extends CI_Model{
 
     public function get_by_id($id){
         $this->db->from($this->table);
-        $this->db->where($this->idq,$id);
+        $this->db->where($this->idq, $id);
         $query = $this->db->get();
         return $query->row();
     }
